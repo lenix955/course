@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация - Volleyball 360</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Volleyball 360</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="rules.html">Правила</a></li>
+          <li><a href="roles.html">Амплуа</a></li>
+          <li><a href="history.html">История</a></li>
+        </ul>
+      </nav>
+      <a href="register.html" class="btn-primary">Регистрация</a>
+    </div>
+  </header>
+
+  <section class="register-content">
+    <div class="container">
+      <h1>Регистрация</h1>
+      <p class="intro-text">Присоединяйтесь к нашему сообществу! Заполните форму ниже, чтобы создать аккаунт.</p>
+
+      <!-- Преимущества регистрации -->
+      <div class="benefits">
+        <h2>Зачем регистрироваться?</h2>
+        <ul>
+          <li><strong>Доступ к эксклюзивным материалам:</strong> Получайте доступ к обучающим видео, статьям и советам от профессионалов.</li>
+          <li><strong>Участие в турнирах:</strong> Регистрируйтесь на внутренние турниры и соревнования.</li>
+          <li><strong>Общение с единомышленниками:</strong> Присоединяйтесь к нашему форуму и обсуждайте волейбол с другими фанатами.</li>
+          <li><strong>Персональные рекомендации:</strong> Получайте советы по тренировкам и улучшению навыков, основанные на вашем уровне.</li>
+          <li><strong>Скидки и акции:</strong> Получайте специальные предложения от наших партнёров.</li>
+        </ul>
+      </div>
+
+      <!-- Форма регистрации -->
+      <div class="form-container">
+        <form class="register-form" id="register-form">
+          <div class="form-group">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Подтвердите пароль:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Повторите пароль" required>
+          </div>
+
+          <button type="submit" class="btn-accent">Зарегистрироваться</button>
+        </form>
+      </div>
+
+      <!-- Всплывающее сообщение -->
+      <div class="success-message" id="success-message">
+        <p>Готово!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">Volleyball 360</div>
+      <div class="footer-links">
+        <a href="index.html">Главная</a>
+        <a href="rules.html">Правила</a>
+        <a href="roles.html">Амплуа</a>
+        <a href="history.html">История</a>
+      </div>
+      <div class="footer-contacts">
+        <p>Контакты:</p>
+        <p>lenakononovaslv@gmail.com</p>
+        <p>+7 (917) 424-01-48</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Обработка отправки формы
+    document.getElementById('register-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Отменяем стандартное поведение формы
+
+      // Показываем сообщение "Готово!"
+      const successMessage = document.getElementById('success-message');
+      successMessage.style.display = 'block';
+
+      // Скрываем сообщение через 3 секунды
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 3000);
+
+      // Очищаем форму (опционально)
+      this.reset();
+    });
+  </script>
+</body>
+
+</html>
